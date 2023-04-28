@@ -6,4 +6,13 @@ const getAll = () => {
     return request.then(response => response.data)
 }
 
-export default {getAll}
+const createNew = async deviceObject => {
+    const response = await axios.post(baseUrl, deviceObject)
+    return response.data
+}
+
+const remove = async (id) => {
+    await axios.delete(`${baseUrl}/${id}`)
+  }
+
+export default {getAll, createNew, remove}
