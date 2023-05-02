@@ -11,8 +11,13 @@ const createNew = async deviceObject => {
     return response.data
 }
 
+const switchRelay = async (id) => {
+    const response = await axios.put(`${baseUrl}/${id}/relay`)
+    return response.data
+}
+
 const remove = async (id) => {
     await axios.delete(`${baseUrl}/${id}`)
   }
 
-export default {getAll, createNew, remove}
+export default {getAll, createNew, remove, switchRelay}

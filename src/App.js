@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Typography } from '@mui/material';
-import devicesService from './services/devices'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -21,7 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PriceChart from './features/PriceChart';
-import Devices from './features/Devices';
+import Devices from './features/Devices/Devices';
 
 const drawerWidth = 240;
 
